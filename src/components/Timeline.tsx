@@ -8,10 +8,10 @@ function Timeline() {
          <div className="w-full md:w-7/12">
             {timeline.map(item => (
                <TimelineItem 
-                  year={item.year}s
+                  year={item.year}
                   title={item.title}
                   duration={item.duration}
-                  details={item.details}
+                  details={item.details} 
                />
             ))}
          </div>
@@ -20,3 +20,4 @@ function Timeline() {
 }
 
 export default Timeline;
+

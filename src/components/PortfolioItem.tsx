@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface PortfolioItemProps {
     title: string;
@@ -9,8 +10,16 @@ interface PortfolioItemProps {
 }
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, desc, stack }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: false, // Only trigger this hook once
+        threshold: 0.1,    // Percentage of the item that needs to be in view
+    });
+
     return (
-        <div className="border-2 border-stone-300 rounded-md overflow-hidden hover:bg-slate-100 hover:shadow-lg">
+        <div 
+            ref={ref}
+            className={`border-2 border-stone-300 rounded-md overflow-hidden hover:bg-slate-100 hover:shadow-lg transition-all duration-500 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
+        >
             <img src={imgUrl}
                 alt="portfolio"
                 className="w-full h-36 md:h-48 object-cover cursor-pointer"

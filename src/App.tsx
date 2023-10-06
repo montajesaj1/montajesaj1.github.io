@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
-import Navbar from './components/Navbar'
+import Sidebar from './components/Navbar'
 
 function App() {
 	const sidebarItems = ['Home', 'Profile', 'Settings', 'Logout'];
@@ -16,7 +17,7 @@ function App() {
 
 	useEffect(() => {
 		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
+			setTheme('light');
 		} else {
 			setTheme('light');
 		}
@@ -70,7 +71,7 @@ function App() {
 
   return (
 	<div className='flex h-screen'>
-		<Navbar items={sidebarItems} onItemSelected={handleItemSelected}/>
+		<Sidebar items={sidebarItems} onItemSelected={handleItemSelected}/>
 		<div className="flex-1 p-4">
 		<button
 			type="button"
@@ -82,21 +83,11 @@ function App() {
 		<div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
 			<div className="max-w-5xl w-3/4 mx-auto">
 				<Intro />
-				<Portfolio />
+				<div className='flex flex-col'>
+					<Portfolio />
+					<Blog />
+				</div>
 				<Timeline />
-				<article className="prose lg:prose-xl">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-    children, with the food earning such an iconic status in our culture that kids will often dress
-    up as warm, cheesy loaf for Halloween.
-  </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-    springing up around the country.
-  </p>
-
-</article>
 				<Footer />
 			</div>
 			</div>

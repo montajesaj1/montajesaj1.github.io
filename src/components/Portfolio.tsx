@@ -4,6 +4,7 @@ import PortfolioItem from './PortfolioItem';
 
 function Portfolio() {
     return (
+        
         <div className="flex items-left justify-left flex-col text-left pb-10">
             <h2 className="text-3xl md:text-7x1 mb-1 mb:mb-3 font-semibold pb-5">Featured Projects</h2>
         <div className="flex flex-col md:flex-row items center justify-center">
