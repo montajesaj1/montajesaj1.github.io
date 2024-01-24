@@ -4,10 +4,28 @@ import Blog from './components/Blog';
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
-import Sidebar from './components/Navbar'
+import Sidebar from './components/Navbar';
+import Spotlight from './components/Spotlight';
+
+import {
+	Link,
+	Container,
+	Heading,
+	Box,
+	Divider,
+	SimpleGrid,
+	Button,
+	List,
+	ListItem,
+	useColorModeValue
+} from '@chakra-ui/react'
+
+import { ChakraProvider } from '@chakra-ui/react'
+
 
 function App() {
-	const sidebarItems = ['Home', 'Profile', 'Settings', 'Logout'];
+
+	const sidebarItems = ['bio', 'projects', 'journey'];
 
 	const handleItemSelected = (item: string) => {
 		console.log(`Selected item: ${item}`);
@@ -70,30 +88,34 @@ function App() {
 	);
 
   return (
-	<div className='flex h-screen'>
-		<Sidebar items={sidebarItems} onItemSelected={handleItemSelected}/>
-		<div className="flex-1 p-4">
-		<button
-			type="button"
-			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-20 bottom-20 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
-		>
-			{theme === 'dark' ? sun : moon}
-		</button>
-		<div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-			<div className="max-w-5xl w-3/4 mx-auto">
-				<Intro />
-				<div className='flex flex-col'>
-					<Portfolio />
-					<Blog />
-				</div>
-				<Timeline />
-				<Footer />
-			</div>
-			</div>
-		</div>
-	 </div>
+	  <ChakraProvider>
+
+		  <div className='flex h-screen'>
+			  <Sidebar items={sidebarItems} onItemSelected={handleItemSelected}/>
+			  <div className="flex-1 p-4">
+				  <button
+		  type="button"
+				   onClick={handleThemeSwitch}
+				   className="fixed p-2 z-10 right-20 bottom-20 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
+			  >
+				  {theme === 'dark' ? sun : moon}
+				  </button>
+				  <div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 justify-center min-h-screen font-inter">
+					  <div className="justify-center items-center max-w-5xl w-3/4 mx-auto">
+						  <Intro />
+						  <div className='flex flex-col'>
+							  <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold pb-4"> projects </h3>
+							  <Portfolio />
+							  {/* <Blog /> */}
+						  </div>
+						  <Timeline />
+						  <Footer />
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </ChakraProvider>
   )
 }
 
-export default App
+export default App;

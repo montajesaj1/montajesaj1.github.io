@@ -16,11 +16,18 @@ export default [
   },
 
   {
-    title: 'Project Name',
-    imgUrl: 'https://cdn.vectorstock.com/i/preview-1x/65/30/default-image-icon-missing-picture-page-vector-40546530.jpg',
+    title: 'Audit Risk kNN Classifier',
+    imgUrl: '../public/assets/knn.png',
     desc: 'This is a project',
-    stack: [''],
+    stack: ['R', 'Jupyer', 'TidyVerse'],
+    link: '',
+  },
+
+  {
+    title: 'Emacs dotfiles',
+    imgUrl: '../public/assets/emacs.png',
+    desc: 'my emacs config',
+    stack: ['Emacs', 'Emacs Lisp', 'LaTex'],
     link: '',
   }
- 
 ] as Item[];

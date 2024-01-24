@@ -1,4 +1,12 @@
 import React from 'react';
+
+import {
+	Divider,
+    Box,
+    Image,
+} from '@chakra-ui/react'
+
+
 import { useInView } from 'react-intersection-observer';
 
 function Intro() {
@@ -10,33 +18,66 @@ function Intro() {
     return (
         <div 
             ref={ref}
-            className={`flex items-left justify-left flex-col text-left pt-20 pb-20 transition-all duration-500 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
+            className={`flex flex-col pt-20 pb-5 transition-all duration-500 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
         >
-            <h1 className="text-3xl md:text-7x1 mb-1 mb:mb-3 font-bold">Hey, my name is AJ.</h1>
-            <p className="text-base mb:text-xl mb-3 font-medium"> Operations Assistant | Aspiring Data Scientist | Cognitive Systems (BA) </p>
-            <p className="text-sm max-w-prose leading-6">Just a little bit about me, I am a A University of British Columbia undergrad studying Cognitive Systems and Data Science,
-                with a strong foundation in software development and data analysis. Experienced in working on diverse teams, including startups, NGOs, and multinational corporations. Currently passionate about accessibility
-                advocacy and the promotion of sustainable practices in tech.</p>
+            <Box display={{ md: 'flex' }}>
+                <Box flexGrow={1}>
+                    <h1 className="text-3xl md:text-7x1 mb- mb:mb-3 font-bold">Hey, my name is AJ.</h1>
+                    <p className="text-base mb:text-xl mb-3 font-medium"> Operations Engineer - Aspiring Data Scientist - Cognitive Systems, Data Science (BA) </p>
+                </Box>
+                <Box
+                    flexShrink={0}
+                    mt={{ base: 4, md: 0 }}
+                    ml={{ md: 6 }}
+                    textAlign="center"
+                >
+                    <Box
+                        borderColor="whiteAlpha.800"
+                        borderWidth={2}
+                        borderStyle="solid"
+                        w="100px"
+                        h="100px"
+                        display="inline-block"
+                        borderRadius="full"
+                        overflow=""
+                    >
+                        <Image
+                            src="https://"
+                            alt="Profile image"
+                            width="90"
+                            height="90"
+                        />
+                    </Box>
+                </Box>
+            </Box>
+            <Divider />
 
+            <div className="pt-5 items-center">
+                <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold"> bio </h3>
+                <p className="indent-6 text-medium leading-6 pb-5"> Just a little bit about me, I am a University of British Columbia undergrad studying Cognitive Systems and Data Science,
+                    with a strong foundation in software development and data analysis. I am also experienced in working on diverse teams, including startups, NGOs, and multinational corporations. </p>
+                <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold"> i ♥ </h3>
+                <p className="indent-6 pb-2 text-medium leading-6"> Leveraging data for social advocacy, open source, reading philosophy (modal logics, decision theory), and exploring new skills (Rust, OCaml).
+                    In my spare time I enjoy Olympic lifting, listening to Podcasts, and ricing Unix. If you are interested in my journey, I've laid it all out in my {' '}
+                    <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
+                       target="_blank"
+                       className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
+                       rel="noreffer noopener"
+                    >
+                        resume
+                    </a>{' '}
+                    and {' '}
+                    <a href='https://github.com/montajesaj1'
+                       target="_blank"
+                       className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
+                       rel="noreffer noopener"
+                    >
+                        GitHub
+                    </a>{'.'}
+                </p>
+            </div>
             <br />
-
-            <p className="text-sm max-w-xl">If you are interested in my journey, I've laid it all out in my {' '}
-                <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
-                target="_blank"
-                className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
-                rel="noreffer noopener"
-                >
-                   resume
-                </a>{' '}
-                and {' '}
-                <a href='https://github.com/montajesaj1'
-                target="_blank"
-                className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
-                rel="noreffer noopener"
-                >
-                   GitHub
-                </a>{'.'}
-            </p>
+            <Divider />
         </div>
     );
 }
