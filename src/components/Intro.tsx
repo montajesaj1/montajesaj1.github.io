@@ -1,11 +1,8 @@
-import React from 'react';
-
 import {
-	Divider,
+    Divider,
     Box,
     Image,
 } from '@chakra-ui/react'
-
 
 import { useInView } from 'react-intersection-observer';
 

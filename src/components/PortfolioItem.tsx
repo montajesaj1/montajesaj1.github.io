@@ -29,7 +29,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, desc, stac
                 <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">
                     {stack && stack.length > 0 && stack.map((item, index) => {
                         return (
-                            <span className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 inline-block text-xs px-3 py-1 mb-1 font-semibold border-2 border-stone-900 rounded-md" key={index}> {item} </span>
+                            <div>
+                                <span className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 inline-block text-xs px-3 py-1 mb-1 font-semibold border-2 border-stone-900 rounded-md" key={index}> {item} </span>
+                                <p>{desc}</p>
+                            </div>
                         );
                     })}
                 </p>

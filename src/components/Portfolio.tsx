@@ -1,11 +1,8 @@
-import React from 'react';
 import portfolio from '../data/portfolio';
 import PortfolioItem from './PortfolioItem';
 
 import {
 	Divider,
-    Box,
-    Image,
 } from '@chakra-ui/react'
 
 function Portfolio() {
