@@ -1,13 +1,11 @@
-import Footer from './components/Footer';
-import Intro from './components/Intro';
-/* import Portfolio from './components/Portfolio'; */
-import Timeline from './components/Timeline';
-import Sidebar from './components/Navbar';
+import Footer from '../components/Footer';
+import Portfolio from '../components/Portfolio';
+import Sidebar from '../components/Navbar';
 
 import { ChakraProvider } from '@chakra-ui/react'
 
 
-function App() {
+function Projects() {
 
 	const sidebarItems = ['bio', 'projects', 'journey'];
 
@@ -86,13 +84,11 @@ function App() {
 				  </button>
 				  <div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 justify-center min-h-screen font-inter">
 					  <div className="justify-center items-center max-w-5xl w-3/4 mx-auto">
-						  <Intro />
 						  <div className='flex flex-col'>
-							  {/* <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold pb-4"> projects </h3> */}
-							  {/* <Portfolio /> */}
+							  <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold pb-4"> projects </h3>
+							  <Portfolio />
 							  {/* <Blog /> */}
 						  </div>
-						  <Timeline />
 						  <Footer />
 					  </div>
 				  </div>
@@ -102,4 +98,4 @@ function App() {
   )
 }
 
-export default App;
+export default Projects;

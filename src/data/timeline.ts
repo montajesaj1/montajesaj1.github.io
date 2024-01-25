@@ -8,7 +8,7 @@ export default [
     },
     {
         year: '2021',
-        title: 'Cognitive Systems | UBC',
+        title: 'Cognitive Systems @ UBC',
         duration: '',
         details:
         'I am currently a student at the University of British Columbia, studying Cognitive Systems and Data Science.',

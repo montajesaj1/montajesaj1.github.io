@@ -18,7 +18,7 @@ function Intro() {
             className={`flex flex-col pt-20 pb-5 transition-all duration-500 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
         >
             <Box display={{ md: 'flex' }}>
-                <Box flexGrow={1}>
+                <Box className="max-w-screen-sm" flexGrow={1}>
                     <h1 className="text-3xl md:text-7x1 mb- mb:mb-3 font-bold">Hey, my name is AJ.</h1>
                     <p className="text-base mb:text-xl mb-3 font-medium"> Operations Engineer - Aspiring Data Scientist - Cognitive Systems, Data Science (BA) </p>
                 </Box>
@@ -39,7 +39,7 @@ function Intro() {
                         overflow=""
                     >
                         <Image
-                            src="https://"
+                            src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
                             alt="Profile image"
                             width="90"
                             height="90"
@@ -47,9 +47,9 @@ function Intro() {
                     </Box>
                 </Box>
             </Box>
-            <Divider />
+            <Divider className="max-w-screen-sm" />
 
-            <div className="pt-5 items-center">
+            <div className="max-w-screen-sm pt-5 items-center">
                 <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold"> bio </h3>
                 <p className="indent-6 text-medium leading-6 pb-5"> Just a little bit about me, I am a University of British Columbia undergrad studying Cognitive Systems and Data Science,
                     with a strong foundation in software development and data analysis. I am also experienced in working on diverse teams, including startups, NGOs, and multinational corporations. </p>
@@ -58,7 +58,7 @@ function Intro() {
                     In my spare time I enjoy Olympic lifting, listening to Podcasts, and ricing Unix. If you are interested in my journey, I've laid it all out in my {' '}
                     <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
                        target="_blank"
-                       className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
+                       className="text-transparent bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text"
                        rel="noreffer noopener"
                     >
                         resume
@@ -66,7 +66,7 @@ function Intro() {
                     and {' '}
                     <a href='https://github.com/montajesaj1'
                        target="_blank"
-                       className="text-cyan-600 hover_underline underline-offset-2 decoration-2 decpration-grey-600"
+                       className="text-transparent bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text"
                        rel="noreffer noopener"
                     >
                         GitHub
@@ -74,7 +74,7 @@ function Intro() {
                 </p>
             </div>
             <br />
-            <Divider />
+            <Divider className="max-w-screen-sm" />
         </div>
     );
 }
