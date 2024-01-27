@@ -4,7 +4,6 @@ import Intro from './components/Intro';
 import Timeline from './components/Timeline';
 /* import Sidebar from './components/Navbar'; */
 import Blog from './components/Blog';
-import Flow from './components/Flow';
 
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -86,7 +85,6 @@ function App() {
 							  {/* <Portfolio /> */}
 								{/* </div> */}
 						  <Timeline />
-							{/* <Flow /> */}
 							<Blog />
 						  <Footer />
 					  </div>
