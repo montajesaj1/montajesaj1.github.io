@@ -8,7 +8,8 @@ import {
 function Portfolio() {
     return (
         
-        <div className="flex items-left justify-left flex-col text-left">
+        <div className="pt-10 flex items-left justify-left flex-col text-left">
+			<h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold pb-4"> projects </h3>
             <div className="flex flex-col md:flex-row items center justify-center">
                 <br></br>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

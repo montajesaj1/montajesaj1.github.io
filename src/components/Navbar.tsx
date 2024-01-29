@@ -1,11 +1,12 @@
 import React from 'react';
+/*
+ * interface SidebarProps {
+ *     items: string[];
+ *     onItemSelected?: (item: string) => void;
+ * }
+ *  */
 
-interface SidebarProps {
-    items: string[];
-    onItemSelected?: (item: string) => void;
-}
-
-const Navbar: React.FC<SidebarProps> = () => {
+const Navbar: React.FC = () => {
     return (
         /* <div */
         /* className="left-5 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg dark:border-slate-600/60 dark:bg-slate-800/50 fixed top-2/4 -translate-y-2/4 left-6 min-h-[auto] min-w-[64px] flex-col rounded-lg border */
@@ -24,7 +25,7 @@ const Navbar: React.FC<SidebarProps> = () => {
                     <a href="/">
                         <li className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Home</li>
                     </a>
-                    <a href="../pages/projects.tsx">
+                    <a href="../pages/projects">
                         <li className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Projects</li>
                     </a>
                 </ul>

@@ -17,8 +17,8 @@ function Intro() {
             ref={ref}
             className={`flex flex-col pt-20 pb-5 transition-all duration-500 transform ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
         >
-            <Box display={{ md: 'flex' }}>
-                <Box className="max-w-screen-sm" flexGrow={1}>
+            <Box className="max-w-screen-sm" display={{ md: 'flex' }}>
+                <Box className="max-w-screen-fit" flexGrow={1}>
                     <h1 className="text-3xl md:text-7x1 mb- mb:mb-3 font-bold">Hey, my name is AJ 👨🏽‍💻</h1>
                     <p className="text-base mb:text-xl font-medium"> Operations Engineer @ {' '}
                         <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
@@ -73,6 +73,7 @@ function Intro() {
                        rel="noreffer noopener"
                     >
                         resume
+
                     </a>{' '}
                     and {' '}
                     <a href='https://github.com/montajesaj1'
@@ -86,7 +87,7 @@ function Intro() {
                 <p className="indent-3 pt-2 text-medium leading-6"> If you'd like to reach me, my email is montajes@ubc.mail.ca. I'm always down to chat with new people! ☕️ </p>
             </div>
             <br />
-            <Divider className="max-w-screen-sm" />
+            {/* <Divider className="max-w-screen-sm" /> */}
         </div>
     );
 }
