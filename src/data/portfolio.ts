@@ -10,16 +10,16 @@ export default [
   {
     title: 'Personal-Profile',
     imgUrl: '../assets/proj1.png',
-    desc: '',
-    stack: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Node JS'],
+    desc: 'The portfolio you are currently viewing is built using the following the stack above.',
+    stack: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Node', 'GitHub Actions'],
     link: '',
   },
 
   {
     title: 'Audit Risk kNN Classifier',
     imgUrl: '../assets/knn.png',
-    desc: 'This is a project',
-    stack: ['R', 'Jupyer', 'TidyVerse'],
+    desc: '',
+    stack: ['R', 'Jupyter', 'TidyVerse'],
     link: '',
   },
 
@@ -29,5 +29,14 @@ export default [
     desc: 'my emacs config',
     stack: ['Emacs', 'Emacs Lisp', 'LaTex'],
     link: '../pages/emacs.jsx',
+  },
+
+  {
+    title: 'Alacritty dotfiles',
+    imgUrl: '../assets/alacritty.png',
+    desc: 'my alacritty config',
+    stack: ['.toml'],
+    link: '../pages/emacs.jsx',
   }
+
 ] as Item[];
