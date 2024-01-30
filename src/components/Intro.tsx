@@ -21,12 +21,12 @@ function Intro() {
                 <Box className="max-w-screen-fit" flexGrow={1}>
                     <h1 className="text-3xl md:text-7x1 mb- mb:mb-3 font-bold">Hey, my name is AJ 👨🏽‍💻</h1>
                     <p className="text-base mb:text-xl font-medium"> Operations Engineer @ {' '}
-                        <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
+                        <a href='https://thecdm.ca/partners/industry/cedar-space'
                            target="_blank"
                            className="text-transparent bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text"
                            rel="noreffer noopener"
                         > CEDaR Space </a> {' '} | Data Science CoPilot @ {' '}
-                        <a href='https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link'
+                        <a href='https://viscoglab.psych.ubc.ca/research/correlation/k'
                            target="_blank"
                            className="text-transparent bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text"
                            rel="noreffer noopener"
@@ -87,7 +87,7 @@ function Intro() {
                 <p className="indent-3 pt-2 text-medium leading-6"> If you'd like to reach me, my email is montajes@ubc.mail.ca. I'm always down to chat with new people! ☕️ </p>
             </div>
             <br />
-            {/* <Divider className="max-w-screen-sm" /> */}
+            <Divider className="max-w-screen-sm" />
         </div>
     );
 }

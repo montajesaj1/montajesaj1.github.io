@@ -28,6 +28,6 @@ export default [
     imgUrl: '../assets/emacs.png',
     desc: 'my emacs config',
     stack: ['Emacs', 'Emacs Lisp', 'LaTex'],
-    link: '',
+    link: '../pages/emacs.jsx',
   }
 ] as Item[];

@@ -1,10 +1,9 @@
 import React from 'react';
-/*
- * interface SidebarProps {
- *     items: string[];
- *     onItemSelected?: (item: string) => void;
- * }
- *  */
+//
+// interface SidebarProps {
+//     items: string[];
+//     onItemSelected?: (item: string) => void;
+// }
 
 const Navbar: React.FC = () => {
     return (
@@ -13,8 +12,8 @@ const Navbar: React.FC = () => {
         /* transform -translate-x-full opacity-0 hover:translate-x-0 hover:opacity-100 transition-transform ease-in-out duration-500" */
         /* > */
         <div
-            className="border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg
-                       dark:border-slate-600/60 dark:bg-slate-800/50 fixed top-2/4 -translate-y-2/4 right-20 min-h-[auto] min-w-[auto] flex-col rounded-lg border"
+            className="pr-4 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg
+                       dark:border-slate-600/60 dark:bg-slate-800/50 fixed top-2/4 -translate-y-2/4 right-5 min-h-[auto] min-w-[auto] flex-col rounded-lg border"
         >
             <div className="flex flex-col p-5">
                 <h1 className='text-xl bold pb-5 pt-15 pb-15 underline underline-offset-4'>nav</h1>
@@ -25,7 +24,7 @@ const Navbar: React.FC = () => {
                     <a href="/">
                         <li className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Home</li>
                     </a>
-                    <a href="/">
+                    <a href="">
                         <li className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Projects</li>
                     </a>
                 </ul>
@@ -45,5 +44,44 @@ const Navbar: React.FC = () => {
     );
 };
 
-
 export default Navbar;
+
+//
+// import React from 'react';
+// import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+//
+// interface SidebarProps {
+//     items: string[];
+//     onItemSelected?: (item: string) => void;
+// }
+
+// import React from 'react';
+// import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+// //
+// // interface SidebarProps {
+// //     items: string[];
+// //     onItemSelected?: (item: string) => void;
+// // }
+//
+// const Navbar: React.FC = () => {
+//     return (
+//         <div
+//             className="pr-4 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg
+//                        dark:border-slate-600/60 dark:bg-slate-800/50 fixed top-2/4 -translate-y-2/4 right-5 min-h-[auto] min-w-[auto] flex-col rounded-lg border"
+//         >
+//             <div className="flex flex-col p-5">
+//                 <h1 className='text-xl bold pb-5 pt-15 pb-15 underline underline-offset-4'>nav</h1>
+//                 <ul>
+//                     <li>
+//                         <Link to="/" className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Home</Link>
+//                     </li>
+//                     <li>
+//                         <Link to="/" className="text-l pt-3 mb-2 text-left rounded hover:bg-slate-100 focus:outline-none focus:bg-slate-500">Projects</Link>
+//                     </li>
+//                 </ul>
+//             </div>
+//         </div>
+//     );
+// };
+//
+// export default Navbar;
