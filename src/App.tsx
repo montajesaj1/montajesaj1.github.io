@@ -34,7 +34,7 @@ const Navbar = () => (
       <div className="flex justify-between items-center py-4">
         <ul className="flex space-x-4">
           <li className="font-bold">
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="font-bold">
             <Link to="/projects">Projects</Link>
@@ -56,7 +56,7 @@ function App() {
         <div className='flex h-screen'>
           <Navbar />
           <Routes>
-            <Route path='/home' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/projects' element={<Portfolio />} />
           </Routes>
           {/*<Navbar />*/}
