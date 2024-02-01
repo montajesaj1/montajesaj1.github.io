@@ -4,6 +4,7 @@ import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 // import Navbar from './components/Navbar';
 import Blog from './components/Blog';
+import { useState, useEffect } from 'react';
 
 import { ChakraProvider } from '@chakra-ui/react'
 import { Route, Routes, Link, HashRouter } from 'react-router-dom'
@@ -24,27 +25,37 @@ const Home = () => (
   </div>
 );
 
-const Navbar = () => (
+const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    };
 
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-  <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div className="container mx-auto px-2"> {/* Adjusted padding from px-4 to px-2 */}
-      <div className="flex justify-between items-center py-4 rounded-full"> {/* Added rounded-full class for pill-like shape */}
-        <a href="/" className="font-bold text-xl">Your Logo</a>
-        <ul className="flex space-x-4">
-          <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
-          <li><Link to="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link></li>
-          {/* Add more navigation links here */}
-        </ul>
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300 ${scrollPosition > 0 ? 'py-2' : 'py-4'} rounded-full`}>
+      <div className="container mx-auto px-2">
+        <div className="flex justify-between items-center">
+          <a href="/" className="font-bold text-xl">AJ Montajes</a>
+          <ul className="flex space-x-4">
+            <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
+            <li><Link to="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  );
+};
 
-
-
-
-);
 
 function App() {
 
