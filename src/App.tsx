@@ -26,24 +26,22 @@ const Home = () => (
 
 const Navbar = () => (
 
-  <div
-    className="fixed top-0 left-0 right-0 bg-white shadow-md"
-    style={{ zIndex: 999 }}
-  >
-    <div className="max-w-screen-md mx-auto px-4">
-      <div className="flex justify-between items-center py-4">
+
+
+  <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div className="container mx-auto px-2"> {/* Adjusted padding from px-4 to px-2 */}
+      <div className="flex justify-between items-center py-4 rounded-full"> {/* Added rounded-full class for pill-like shape */}
+        <a href="/" className="font-bold text-xl">Your Logo</a>
         <ul className="flex space-x-4">
-          <li className="font-bold">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="font-bold">
-            <Link to="/projects">Projects</Link>
-          </li>
+          <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
+          <li><Link to="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link></li>
           {/* Add more navigation links here */}
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
+
+
 
 
 );
@@ -53,7 +51,7 @@ function App() {
   return (
     <ChakraProvider>
       <HashRouter>
-        <div className='flex h-screen'>
+        <div className='flex'>
           <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
