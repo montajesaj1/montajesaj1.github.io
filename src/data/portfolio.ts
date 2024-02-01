@@ -13,6 +13,7 @@ export default [
     desc: 'The portfolio you are currently viewing is built using the following the stack above.',
     stack: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Node', 'GitHub Actions'],
     link: '',
+    element: '',
   },
 
   {
@@ -21,6 +22,7 @@ export default [
     desc: '',
     stack: ['R', 'Jupyter', 'TidyVerse'],
     link: '',
+    element: '',
   },
 
   {
@@ -29,6 +31,7 @@ export default [
     desc: 'my emacs config',
     stack: ['Emacs', 'Emacs Lisp', 'LaTex'],
     link: '../pages/emacs.jsx',
+    element: '',
   },
 
   {
@@ -37,6 +40,7 @@ export default [
     desc: 'my alacritty config',
     stack: ['.toml'],
     link: '../pages/emacs.jsx',
+    element: '',
   }
 
 ] as Item[];
