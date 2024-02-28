@@ -6,8 +6,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamil: {
-        inter: ['inter', 'serif'],
+      fontFamily: {
+        young: ["Young Serif", "serif"],
+        poppins: ["Poppins", "sans-serif"]
       }
     },
   },
