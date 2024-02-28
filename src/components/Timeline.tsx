@@ -3,8 +3,6 @@ import timeline from '../data/timeline';
 import TimelineItem from './TimelineItem';
 
 import {
-  Divider,
-  Box,
   Image,
 } from '@chakra-ui/react'
 
