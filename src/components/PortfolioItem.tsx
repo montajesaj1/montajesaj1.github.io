@@ -9,7 +9,7 @@ interface PortfolioItemProps {
   link: string;
 }
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, desc, stack, link }) => {
+const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, stack, link }) => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Only trigger this hook once
     threshold: 0.1,    // Percentage of the item that needs to be in view
@@ -27,8 +27,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, desc, stac
           className="w-full h-48 md:h-30 object-cover cursor-pointer"
         />
         <div className="w-full h-48 p-4">
-          <h5 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold">{title}</h5>
-          <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">
+          <h5 className="text-lg md:text-xl mb-2 md:mb-3 font-young">{title}</h5>
+          <p className="font-young flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">
             {stack && stack.length > 0 && stack.map((item, index) => {
               return (
                 <div>
@@ -37,7 +37,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ title, imgUrl, desc, stac
               );
             })}
           </p>
-          <p className="text-sm pt-10">{desc}</p>
         </div>
       </div>
     </a>

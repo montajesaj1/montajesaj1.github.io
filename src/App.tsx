@@ -3,7 +3,7 @@ import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/Timeline';
 // import Navbar from './components/Navbar';
-import Blog from './components/Blog';
+// import Blog from './components/Blog';
 import { useState, useEffect } from 'react';
 
 import { ChakraProvider } from '@chakra-ui/react'
@@ -11,14 +11,13 @@ import { Route, Routes, Link, HashRouter } from 'react-router-dom'
 
 const Home = () => (
   <div className="flex-1 p-4">
-    <div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 justify-center min-h-screen font-inter">
+    <div className="bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 justify-center min-h-screen font-display">
       <div className="justify-center items-center max-w-5xl w-3/4 mx-auto">
         <Intro />
         {/* <div className='flex flex-col'> */}
         {/* <h3 className="underline underline-offset-4 text-xl md:text-7x1 mb:mb-3 font-bold pb-4"> projects </h3> */}
         {/* </div> */}
         <Timeline />
-        <Blog />
         <Footer />
       </div>
     </div>
@@ -42,13 +41,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300 ${scrollPosition > 0 ? 'py-2' : 'py-4'} rounded-full`}>
-      <div className="container mx-auto px-2">
+    <nav className={`fixed top-0 w-full items-center bg-white shadow-md transition-all duration-300 ${scrollPosition > 0 ? 'py-2' : 'py-4'} rounded-full`}>
+      <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <a href="/" className="font-bold text-xl">AJ Montajes</a>
+          <a href="/" className="font-bold text-xl font-young">A/J </a>
           <ul className="flex space-x-4">
-            <li><Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link></li>
-            <li><Link to="/projects" className="text-gray-600 hover:text-gray-900">Projects</Link></li>
+            <li><Link to="/" className="text-gray-600 hover:text-gray-900 font-young">Home</Link></li>
+            <li><Link to="/projects" className="text-gray-600 hover:text-gray-900 font-young">Portfolio</Link></li>
           </ul>
         </div>
       </div>
