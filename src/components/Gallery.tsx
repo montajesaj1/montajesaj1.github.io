@@ -51,7 +51,6 @@ function Gallery() {
                   imgUrl={item.imgUrl}
                   title={item.title}
                   desc={item.desc}
-                  tag={item.tag}
                   stack={item.stack}
                   link={item.link}
                 />

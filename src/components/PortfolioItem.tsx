@@ -5,7 +5,6 @@ interface PortfolioItemProps {
   title: string;
   imgUrl: string;
   desc: string;
-  tag: string;
   stack: string[];
   link: string;
 }
@@ -14,7 +13,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   title,
   imgUrl,
   desc,
-  tag,
   stack,
   link,
 }) => {

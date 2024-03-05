@@ -1,5 +1,3 @@
-// At the top of your Portfolio.js file
-import React from "react";
 import portfolio from "../data/portfolio";
 import PortfolioItem from "./PortfolioItem";
 import { Divider } from "@chakra-ui/react";

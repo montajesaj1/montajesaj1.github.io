@@ -1,6 +1,5 @@
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
-import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 // import Navbar from './components/Navbar';
 // import Blog from './components/Blog';
@@ -26,7 +25,7 @@ const Home = () => (
 );
 
 const Navbar = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
