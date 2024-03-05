@@ -3,8 +3,18 @@ import PortfolioItem from "./PortfolioItem";
 import "../assets/Portfolio.css";
 import { Image } from "@chakra-ui/react";
 
+interface PortfolioItem {
+  imgUrl: string;
+  title?: string;
+  desc: string;
+  stack?: string[]; // Ensuring this matches the expected type in PortfolioItemComponent
+  link: string;
+  isImage: boolean;
+}
+
 function Gallery() {
   // Create an image item to include in the portfolio items
+
   const imageItem = {
     imgUrl: "../assets/working.gif",
     title: "", // Optional, if you want to give a title
@@ -20,7 +30,7 @@ function Gallery() {
   // Adjust starting index for portfolio items to maintain the pattern
   portfolio.forEach((item, index) => {
     const columnIndex = (index + 1) % 4; // Adjust index to account for the image item
-    columns[columnIndex].push(item);
+    columns[columnIndex].push(item as PortfolioItem);
   });
 
   return (

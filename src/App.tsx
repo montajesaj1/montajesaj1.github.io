@@ -4,7 +4,7 @@ import Timeline from "./components/Timeline";
 // import Navbar from './components/Navbar';
 // import Blog from './components/Blog';
 import Gallery from "./components/Gallery";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { Route, Routes, Link, HashRouter } from "react-router-dom";
@@ -26,19 +26,20 @@ const Home = () => (
 
 const Navbar = () => {
   // const [scrollPosition, setScrollPosition] = useState(0);
+  //
+  //  useEffect(() => {
+  //    const handleScroll = () => {
+  //      const position = window.pageYOffset;
+  //      setScrollPosition(position);
+  //    };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.pageYOffset;
-      setScrollPosition(position);
-    };
+  // window.addEventListener("scroll", handleScroll, { passive: true });
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   }, []);
+  //
 
   return (
     <nav className="py-5 fixed top-3 left-1/2 transform -translate-x-1/2 flex items-center justify-center bg-stone-50 shadow-md transition-all duration-300 py-5 rounded-full z-50 border-stone-500">
