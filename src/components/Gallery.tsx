@@ -1,36 +1,35 @@
-import portfolio from "../data/portfolio"; // Assuming this is your portfolio data file
-import PortfolioItem from "./PortfolioItem";
+import portfolio from "../data/portfolio"; // Correct import path
+import PortfolioItem from "./PortfolioItem"; // Component to display each portfolio item
 import "../assets/Portfolio.css";
 import { Image } from "@chakra-ui/react";
 
-interface PortfolioItem {
+// Directly use the Item interface from the portfolio data file
+// If the Item interface is defined in portfolio.ts, consider exporting it from there and importing it here.
+interface Item {
+  title: string;
   imgUrl: string;
-  title?: string;
   desc: string;
-  stack?: string[]; // Ensuring this matches the expected type in PortfolioItemComponent
+  stack: string[];
   link: string;
-  isImage: boolean;
 }
 
 function Gallery() {
-  // Create an image item to include in the portfolio items
-
-  const imageItem = {
+  // Special image item, note that stack is an array as per your Item interface
+  const imageItem: Item = {
+    title: "",
     imgUrl: "../assets/working.gif",
-    title: "", // Optional, if you want to give a title
-    desc: "Profile image", // Description or alt text for the image
-    stack: [], // Optional, if there's relevant info
-    link: "", // Optional, if there's a relevant link
-    isImage: true, // A flag to identify this is a special item (image)
+    desc: "", // Assuming you want to use the same description here
+    stack: [], // Empty array to match the Item interface
+    link: "", // Assuming there's no specific link for this image
   };
 
   // Initialize columns with the image item in one of them
-  const columns = [[imageItem], [], [], []];
+  const columns: Item[][] = [[imageItem], [], [], []];
 
   // Adjust starting index for portfolio items to maintain the pattern
   portfolio.forEach((item, index) => {
     const columnIndex = (index + 1) % 4; // Adjust index to account for the image item
-    columns[columnIndex].push(item as PortfolioItem);
+    columns[columnIndex].push(item); // No need for type assertion now
   });
 
   return (
