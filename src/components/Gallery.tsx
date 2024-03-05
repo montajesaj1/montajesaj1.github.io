@@ -44,7 +44,7 @@ function Gallery() {
         Projects, Research, and Miscellaneous Creations
       </h3>
 
-      <div className="px-20 justify-center grid grid-cols-3 md:grid-cols-3 gap-3 items-start">
+      <div className="px-20 justify-center grid grid-cols-3 sm:grid-cols-1 md:grid-cols-3 gap-3 items-start">
         {columns.map((column, index) => (
           <div key={index} className="grid gap-5">
             {column.map((item, itemIndex) =>
