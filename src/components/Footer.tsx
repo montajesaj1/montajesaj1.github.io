@@ -1,13 +1,13 @@
-
 function Footer() {
   return (
-    <div className="py-5 text-left">
+    <div className="pt-20 py-5 text-center">
       <div className="container max-w-screen-lg mx-auto">
         <div>
-          <div className="flex flex-wrap gap-2">
+          <div className="items-center justify-center flex flex-wrap gap-2">
             <a
               href="https://linkedin.com/in/anthony-joseph-montajes"
-              className="bg-stone-400 p-2 font-young text-white inline-flex space-x-2 rounded-full">
+              className="bg-stone-400 p-2 font-young text-white inline-flex space-x-2 rounded-full"
+            >
               <svg
                 className="w-5 h-5 fill-current"
                 role="img"
@@ -21,7 +21,8 @@ function Footer() {
             </a>
             <a
               href="https://github.com/montajesaj1"
-              className="bg-stone-400 p-2 font-semibold text-white inline-flex items-left space-x-2 rounded-full">
+              className="bg-stone-400 p-2 font-semibold text-white inline-flex items-left space-x-2 rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -45,7 +46,8 @@ function Footer() {
         </div>
       </div>
       <p className="text-sm mt-2 justify-left opacity-50">
-        &copy; {new Date().getFullYear()} Anthony Joseph Montajes. All rights reserved.
+        &copy; {new Date().getFullYear()} Anthony Joseph Montajes. All rights
+        reserved.
       </p>
     </div>
   );

@@ -1,0 +1,23 @@
+/* Portfolio.css */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.masonry-grid > div {
+  break-inside: avoid;
+  margin-bottom: 3rem;
+}
