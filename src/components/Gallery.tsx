@@ -19,7 +19,7 @@ function Gallery() {
   const imageItem: Item = {
     imgUrl: "../assets/working.gif",
     title: "",
-    desc: "Profile image",
+    desc: "",
     stack: [],
     link: "",
     isImage: true,
@@ -44,9 +44,9 @@ function Gallery() {
         Projects, Research, and Miscellaneous Creations
       </h3>
 
-      <div className="pt-5 px-20 items-center justify-center grid grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="px-20 justify-center grid grid-cols-3 md:grid-cols-4 gap-4 items-start">
         {columns.map((column, index) => (
-          <div key={index} className="grid gap-4">
+          <div key={index} className="grid gap-5">
             {column.map((item, itemIndex) =>
               item.isImage ? (
                 <Image
