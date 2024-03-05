@@ -11,16 +11,18 @@ interface Item {
   desc: string;
   stack: string[];
   link: string;
+  isImage?: boolean;
 }
 
 function Gallery() {
   // Special image item, note that stack is an array as per your Item interface
   const imageItem: Item = {
-    title: "",
     imgUrl: "../assets/working.gif",
-    desc: "", // Assuming you want to use the same description here
-    stack: [], // Empty array to match the Item interface
-    link: "", // Assuming there's no specific link for this image
+    title: "",
+    desc: "Profile image",
+    stack: [],
+    link: "",
+    isImage: true,
   };
 
   // Initialize columns with the image item in one of them
