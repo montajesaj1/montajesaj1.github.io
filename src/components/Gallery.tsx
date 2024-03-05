@@ -26,11 +26,11 @@ function Gallery() {
   };
 
   // Initialize columns with the image item in one of them
-  const columns: Item[][] = [[imageItem], [], [], []];
+  const columns: Item[][] = [[imageItem], [], []];
 
   // Adjust starting index for portfolio items to maintain the pattern
   portfolio.forEach((item, index) => {
-    const columnIndex = (index + 1) % 4; // Adjust index to account for the image item
+    const columnIndex = (index + 1) % 3; // Adjust index to account for the image item
     columns[columnIndex].push(item); // No need for type assertion now
   });
 
@@ -44,7 +44,7 @@ function Gallery() {
         Projects, Research, and Miscellaneous Creations
       </h3>
 
-      <div className="px-20 justify-center grid grid-cols-3 md:grid-cols-4 gap-4 items-start">
+      <div className="px-20 justify-center grid grid-cols-3 md:grid-cols-3 gap-3 items-start">
         {columns.map((column, index) => (
           <div key={index} className="grid gap-5">
             {column.map((item, itemIndex) =>
@@ -53,8 +53,8 @@ function Gallery() {
                   key={itemIndex}
                   src={item.imgUrl}
                   alt={item.desc}
-                  width="350"
-                  height="350"
+                  width="460"
+                  height="460"
                 />
               ) : (
                 <PortfolioItem
