@@ -11,9 +11,9 @@ function Intro() {
   return (
     <div
       ref={ref}
-      className={`flex flex-col pt-20 pb-5 transition-all duration-500 transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
+      className={`flex flex-col pt-20 transition-all duration-500 transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
     >
-      <Box className="max-w-screen-md" display={{ md: "flex" }}>
+      <Box className="min-w-screen-lg" display={{ md: "flex" }}>
         <Image
           // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
           src="../assets/icon.svg"
@@ -116,7 +116,7 @@ function Intro() {
       </div>
 
       <br />
-      <Divider className="max-w-screen-sm" />
+      <Divider className="max-w-screen-md" />
     </div>
   );
 }

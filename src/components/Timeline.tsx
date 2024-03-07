@@ -7,7 +7,7 @@ import { Image } from "@chakra-ui/react";
 function Timeline() {
   return (
     <div className="pt-20 place-items-center">
-      <h3 className="justify-center text-3xl md:text-7x1 mb:mb-3 font-young">
+      <h3 className="pl-12 justify-center text-3xl md:text-7x1 mb:mb-3 font-young">
         My journey so far!
       </h3>
       <Image
