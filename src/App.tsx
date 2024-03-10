@@ -14,12 +14,27 @@ const Home = () => (
   <div className="flex flex-1 items-center justify-center min-w-1.5 min-h-screen p-4">
     <div className="flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 w-full max-w-5xl px-10 py-4">
       <Intro />
-      <Timeline />
       <Footer />
     </div>
   </div>
 );
 
+// const Currently = () => {
+//   return (
+//     <div className="flex-1 pt-10 p-4">
+//       <div className="max-w-screen-fit pt-10 flex items-left justify-left flex-col text-left">
+//         <h1 className="pb-10 pl-36 items-center justify-center text-3xl md:text-7x1 mb- mb:mb-3 font-young">
+//           Work in Progress!
+//         </h1>
+//         <div className="flex flex-col md:flex-row items-center justify-center">
+//           {/* Modified grid container */}
+//           <div className="masonry-grid"></div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+//
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -57,6 +72,14 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                to="/resume"
+                className="font-young text-gray-600 hover:text-gray-900"
+              >
+                Resume
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/gallery"
                 className="font-young text-gray-600 hover:text-gray-900"
               >
@@ -78,6 +101,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Timeline />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
           {/*<Navbar />*/}

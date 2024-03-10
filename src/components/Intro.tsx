@@ -50,7 +50,7 @@ function Intro() {
         </a>{" "}
       </p>
       <p className="text-left font-young mb:text-xl mb-3">
-        Bachelor of Arts, Cognitive Systems 🧠 and Data Science 📈 @ UBC
+        Bachelor of Arts, Cognitive Systems 🧠 and Computer Science 🧑🏽‍💻 @ UBC
       </p>
 
       <Divider className="max-w-screen-md" />

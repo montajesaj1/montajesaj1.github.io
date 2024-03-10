@@ -6,36 +6,44 @@ import { Image } from "@chakra-ui/react";
 
 function Timeline() {
   return (
-    <div className="pt-20 place-items-center">
-      <h3 className="pl-12 justify-center text-3xl md:text-7x1 mb:mb-3 font-young">
-        My journey so far!
-      </h3>
-      <Image
-        // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
-        src="../assets/journey.svg"
-        alt="Profile image"
-        width="200"
-        height="200"
-      />
+    <div className="flex flex-1 items-center justify-center min-w-1.5 min-h-screen p-4">
+      <div className="flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 w-full max-w-5xl px-10 py-4">
+        <div className="pt-20 place-items-center">
+          <h3 className="pl-12 justify-center text-3xl md:text-7x1 mb:mb-3 font-young">
+            My journey so far!
+          </h3>
+          <Image
+            // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
+            src="../assets/journey.svg"
+            alt="Profile image"
+            width="200"
+            height="200"
+          />
 
-      <div className="flex flex-col md:flex-row my-1 pt-10">
-        <div className="max-w-prose">
-          {timeline.map((item) => (
-            <TimelineItem
-              year={item.year}
-              title={item.title}
-              duration={item.duration}
-              details={item.details}
+          <h3 className="pl-12 justify-center text-xl md:text-7x1 mb:mb-3 font-young">
+            Experience
+          </h3>
+
+          <div className="flex flex-col md:flex-row my-1 pt-10">
+            <div className="max-w-prose">
+              {timeline.map((item) => (
+                <TimelineItem
+                  year={item.year}
+                  title={item.title}
+                  duration={item.duration}
+                  details={item.details}
+                />
+              ))}
+            </div>
+            <Image
+              // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
+              src="../assets/adventure.svg"
+              alt="Profile image"
+              width="300"
+              height="300"
             />
-          ))}
+          </div>
         </div>
-        <Image
-          // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
-          src="../assets/adventure.svg"
-          alt="Profile image"
-          width="300"
-          height="300"
-        />
       </div>
     </div>
   );
