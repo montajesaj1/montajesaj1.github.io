@@ -6,7 +6,6 @@ interface TimelineItemProps {
   title: string;
   duration: string;
   details: string;
-  courses: string;
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({
