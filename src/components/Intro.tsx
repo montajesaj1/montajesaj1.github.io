@@ -1,5 +1,4 @@
 import { Divider, Box, Image } from "@chakra-ui/react";
-
 import { useInView } from "react-intersection-observer";
 
 function Intro() {
@@ -60,7 +59,7 @@ function Intro() {
           <p className="text-left text-medium font-display leading-6 pb-5">
             {" "}
             I am a University of British Columbia undergrad studying Cognitive
-            Systems and Data Science, with a strong foundation in software
+            Systems and Computer Science, with a strong foundation in software
             development and data analysis. I am experienced in working on
             diverse teams, including startups, NGOs, and multinational
             corporations.{" "}
@@ -81,11 +80,11 @@ function Intro() {
           </h3>
           <p className="pb-2 text-medium leading-6">
             {" "}
-            Leveraging data for social advocacy, open source, , reading
-            philosophy (modal logics, decision theory), and exploring new skills
-            (Rust, PyTorch). In my spare time I enjoy Olympic lifting, listening
-            to Podcasts, and ricing Unix. If you are interested in my journey,
-            I've laid it all out in my{" "}
+            Leveraging data for social advocacy, open source, reading philosophy
+            (modal logics, decision theory), and exploring new skills (Rust,
+            PyTorch). In my spare time I enjoy Olympic lifting, listening to
+            Podcasts, and ricing Unix. If you are interested in my journey, I've
+            laid it all out in my{" "}
             <a
               href="https://drive.google.com/file/d/1A9vYYNbsvc2tFqXo6lXEIXWnNziYSAs2/view?usp=drive_link"
               target="_blank"
@@ -105,11 +104,6 @@ function Intro() {
             </a>
             {"."}
           </p>
-          <p className="pt-2 text-medium leading-6">
-            {" "}
-            You can reach me at montajes@ubc.mail.ca. I'm always down to chat
-            with new people! ☕️{" "}
-          </p>
 
           <br />
         </Box>
@@ -117,6 +111,26 @@ function Intro() {
 
       <br />
       <Divider className="max-w-screen-md" />
+
+      <Box className="pt-10 max-w-screen-sm" display={{ md: "flex" }}>
+        <Box className="align-items-baseline">
+          <h3 className="text-xl text-light mb:mb-3 font-young">
+            I am currently looking for new opportunities!
+          </h3>
+          <p className="pt-2 text-medium leading-6">
+            {" "}
+            You can reach me at montajes@ubc.mail.ca. I'm always down to chat
+            with new people! ☕️{" "}
+          </p>
+        </Box>
+
+        <Image
+          src="../assets/adventure.svg"
+          alt="Adventure image"
+          width="200"
+          height="200"
+        />
+      </Box>
     </div>
   );
 }

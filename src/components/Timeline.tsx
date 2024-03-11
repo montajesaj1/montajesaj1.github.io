@@ -1,47 +1,55 @@
-/* import React from 'react'; */
+import React from "react";
 import timeline from "../data/timeline";
+import education from "../data/education";
 import TimelineItem from "./TimelineItem";
-
 import { Image } from "@chakra-ui/react";
 
 function Timeline() {
   return (
-    <div className="flex flex-1 items-center justify-center min-w-1.5 min-h-screen p-4">
+    <div className="pt-28 flex flex-1 items-center justify-center min-w-full min-h-screen p-4">
       <div className="flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 w-full max-w-5xl px-10 py-4">
-        <div className="pt-20 place-items-center">
-          <h3 className="pl-12 justify-center text-3xl md:text-7x1 mb:mb-3 font-young">
+        <div className="place-items-center">
+          <h3 className="pl-12 justify-center text-3xl mb-3 font-young">
             My journey so far!
           </h3>
           <Image
-            // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
             src="../assets/journey.svg"
             alt="Profile image"
             width="200"
             height="200"
           />
 
-          <h3 className="pl-12 justify-center text-xl md:text-7x1 mb:mb-3 font-young">
+          {/* Education Section */}
+          <h3 className="pl-2 pt-10 justify-center text-2xl mb-3 font-young">
+            Education
+          </h3>
+          <div className="max-w-prose">
+            {education.map((item, index) => (
+              <TimelineItem
+                key={`edu-${index}`}
+                year={item.year}
+                title={item.title}
+                duration={item.duration}
+                details={item.details}
+                courses={item.courses}
+              />
+            ))}
+          </div>
+
+          {/* Experience Section */}
+          <h3 className="pl-2 pt-10 justify-center text-2xl mb-3 font-young">
             Experience
           </h3>
-
-          <div className="flex flex-col md:flex-row my-1 pt-10">
-            <div className="max-w-prose">
-              {timeline.map((item) => (
-                <TimelineItem
-                  year={item.year}
-                  title={item.title}
-                  duration={item.duration}
-                  details={item.details}
-                />
-              ))}
-            </div>
-            <Image
-              // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
-              src="../assets/adventure.svg"
-              alt="Profile image"
-              width="300"
-              height="300"
-            />
+          <div className="max-w-prose">
+            {timeline.map((item, index) => (
+              <TimelineItem
+                key={`exp-${index}`}
+                year={item.year}
+                title={item.title}
+                duration={item.duration}
+                details={item.details}
+              />
+            ))}
           </div>
         </div>
       </div>
