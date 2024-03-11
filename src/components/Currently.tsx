@@ -14,11 +14,13 @@ const currently: Project[] = [
   {
     title: "CoPilot @ Visual Cognition Lab",
     imgUrl: "../assets/code.png", // Update the path as necessary
+    description: "",
     link: "https://example.com/project1",
   },
   {
     title: "Operations Engineer @ CEDaR Space",
     imgUrl: "path/to/image2.jpg", // Update the path as necessary
+    description: "",
     link: "https://example.com/project2",
   },
 ];

@@ -1,4 +1,3 @@
-import React from "react";
 import timeline from "../data/timeline";
 import education from "../data/education";
 import TimelineItem from "./TimelineItem";
@@ -31,7 +30,6 @@ function Timeline() {
                 title={item.title}
                 duration={item.duration}
                 details={item.details}
-                courses={item.courses}
               />
             ))}
           </div>

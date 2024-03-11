@@ -14,7 +14,6 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   title,
   duration,
   details,
-  courses,
 }) => {
   const [ref, inView] = useInView({
     triggerOnce: false, // Only trigger this hook once
@@ -41,9 +40,6 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         </p>
         <p className="my-2 text-base font-poppins text-stone-500 dark:text-stone-400">
           {details}
-          <p className="my-2 text-base font-poppins text-stone-500 dark:text-stone-400">
-            {courses}
-          </p>
         </p>
       </li>
     </ol>
