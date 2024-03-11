@@ -1,23 +1,30 @@
 export default [
-    {
-        year: '2002',
-        title: 'Born in Hong Kong (香港)',
-        duration: '',
-        details:
-        'Raised and continued to live in HK till 2021.',
-    },
-    {
-        year: '2021',
-        title: 'Cognitive Systems @ UBC',
-        duration: '',
-        details:
-        'I am currently a student at the University of British Columbia, studying Cognitive Systems and Data Science.',
-    },
-    {
-        year: 'Today',
-        title: 'Operations Engineer & Researcher',
-        duration: '',
-        details:
-        'I am currently an Operations Engineer at CEDaR space media lab (assoc. with UBC CIS) and a researcher at the Visual Cognition Lab.',
-    },
-]
+  {
+    year: "2017",
+    title: "Data Science Intern",
+    duration: "@ BlueSky Energy Technology",
+    details:
+      "Promoted from Data Analyst intern to Data Scientist intern. Collaborated on LSTM neural networks and regression models for real-time energy predictions. Installed power-usage sensors and formatted training data.",
+  },
+  {
+    year: "2020",
+    title: "Production Engineering Intern ",
+    duration: "@ Marshall Wace LLP",
+    details:
+      "First application deployment on OpenShift 4. Maintained Confluence documentation and presented deployment methods. Developed a Flask and SQL based 'Ticker Search' web app.",
+  },
+  {
+    year: "Present",
+    title: "Operations Engineer",
+    duration: "@ CEDaR Space CIS UBC",
+    details:
+      "Coordinated a map-based exhibit for UBC's MOA. Implemented front-ends using ReactJS, NodeJS, and Chakra UI. Engaged with IT teams for future web to native app transition.",
+  },
+  {
+    year: "Present",
+    title: "Data Science CoPilot",
+    duration: "@ Visual Cognition Lab UBC",
+    details:
+      "Worked on the 'Correlation Project'. Built experiment conditions with JavaScript, NodeJS, and Firebase. Streamlined data analysis with Python.",
+  },
+];
