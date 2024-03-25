@@ -27,7 +27,7 @@ function Intro() {
 
       <p className="text-base mb:text-xl font-young">
         {" "}
-        Operations Engineer @{" "}
+        Operations Assistant @{" "}
         <a
           href="https://thecdm.ca/partners/industry/cedar-space"
           target="_blank"
@@ -37,7 +37,7 @@ function Intro() {
           {" "}
           CEDaR Space
         </a>{" "}
-        | Data Science CoPilot @{" "}
+        | Data Science Specialist @{" "}
         <a
           href="https://viscoglab.psych.ubc.ca/research/correlation/k"
           target="_blank"
