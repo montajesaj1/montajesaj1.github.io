@@ -27,15 +27,15 @@ function Intro() {
 
       <p className="text-base mb:text-xl font-young">
         {" "}
-        Operations Assistant @{" "}
+        Research Assistant @{" "}
         <a
-          href="https://thecdm.ca/partners/industry/cedar-space"
+          href=""
           target="_blank"
           className="underline"
           rel="noreffer noopener"
         >
           {" "}
-          CEDaR Space
+          Sauder Business School
         </a>{" "}
         | Data Science Specialist @{" "}
         <a
