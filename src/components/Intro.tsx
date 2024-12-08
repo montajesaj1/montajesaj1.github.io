@@ -31,7 +31,7 @@ function Intro() {
       <div className="flex flex-col items-center relative">
         {/* Image Section */}
 
-        <div className="flex flex-col md:flex-row items-center justify-center space-x-10 pt-20 pb-20 max-w-screen-md">
+        <div className="flex flex-col md:flex-row items-center justify-center space-x-10 pt-20 pb-40 max-w-screen-md">
           <Image
             src="../assets/working.gif"
             alt="working"

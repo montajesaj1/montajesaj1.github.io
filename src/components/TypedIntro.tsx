@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import {  Box } from "@chakra-ui/react";
+import {  Box, Divider } from "@chakra-ui/react";
 
 interface TypedTextProps {
   text: string;
@@ -28,17 +28,17 @@ function TypedText({ text, speed = 50, className = '' }: TypedTextProps) {
 
 function TypedIntro() {
   const [showNameBox, setShowNameBox] = useState(false);
-  const [showWorkDetails, setShowWorkDetails] = useState(false);
+  const [showSub, setShowSub] = useState(false);
   const [showEducationDetails, setShowEducationDetails] = useState(false);
 
   useEffect(() => {
     const nameBoxTimer = setTimeout(() => setShowNameBox(true), 500);
-    const workDetailsTimer = setTimeout(() => setShowWorkDetails(true), 1500);
+    const subTimer = setTimeout(() => setShowSub(true), 500);
     const educationDetailsTimer = setTimeout(() => setShowEducationDetails(true), 2500);
 
     return () => {
       clearTimeout(nameBoxTimer);
-      clearTimeout(workDetailsTimer);
+      clearTimeout(subTimer);
       clearTimeout(educationDetailsTimer);
     };
   }, []);
@@ -58,56 +58,40 @@ function TypedIntro() {
           css={{ backdropFilter: 'blur(10px)' }}
         >
           <TypedText 
-            text="Hey, my name is AJ" 
+            text="Hey, my name is AJ." 
             className="block"
+          />
+          <TypedText 
+            text="welcome to my site" 
+            className="block font-poppins italic text-xl"
           />
         </Box>
       )}
+      
 
-      {showWorkDetails && (
-        <p className="text-center text-base mb:text-xl font-young">
+      {showSub && (
+        <p className="text-center text-base mb:text-xl font-poppins">
           <TypedText 
-            text="Data Science Intern @ " 
-            className="inline"
+            text="Data Scientist and Quant UXR" 
+            className="inline text-xl"
           />
-          <a
-            href=""
-            target="_blank"
-            className="underline"
-            rel="noreffer noopener"
-          >
-            <TypedText 
-              text="EPAM Systems" 
-              className="inline"
-            />
-          </a>
-          <TypedText 
-            text=" | Incoming UXR @ " 
-            className="inline"
-          />
-          <a
-            href="https://viscoglab.psych.ubc.ca/research/correlation/k"
-            target="_blank"
-            className="underline"
-            rel="noreffer noopener"
-          >
-            <TypedText 
-              text="Global Relay" 
-              className="inline"
-            />
-          </a>
         </p>
       )}
 
-      {showEducationDetails && (
-        <p className="pb-5 text-center font-young mb:text-xl mb-3">
+    <Divider/>
+
+    {showEducationDetails && (
+        <p className="pb-5 text-center font-poppins mb:text-xl mb-3">
           <TypedText 
-            text="Bachelor of Arts, Cognitive Systems 🧠 and Computer Science 🧑🏽‍💻 @ UBC" 
-            className="block"
+            text="UBC COGS 🧠 and CPSC 🧑🏽‍💻  " 
+            className="inline text-xl"
           />
         </p>
       )}
-    </div>
+
+
+
+      </div>
   );
 }
 
