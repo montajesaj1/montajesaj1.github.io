@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Divider, Box, Image } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 
