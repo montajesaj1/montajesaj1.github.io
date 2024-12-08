@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Divider, Box, Image } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
+import TypedIntro from "./TypedIntro"
 
 function Intro() {
   // Ref for the "I care about" section
@@ -26,58 +27,27 @@ function Intro() {
   }, [careInView]);
 
   return (
-    <div className="flex flex-col pt-20 transition-all duration-500 transform">
+    <div className="flex flex-col pt-40 transition-all duration-500 transform">
       <div className="flex flex-col items-center relative">
         {/* Image Section */}
-        <Image
-          src="../assets/working.gif"
-          alt="working"
-          height={550}
-          width={600}
-        />
 
-        {/* Box Section */}
-        <Box
-          className="text-3xl md:text-7x1 mb:mb-3 font-young"
-          borderRadius="lg"
-          mb={5}
-          p={2}
-          textAlign="center"
-          bg={'gray.100'}
-          css={{ backdropFilter: 'blur(10px)' }}
-        >
-          Hey, my name is AJ
-        </Box>
+        <div className="flex flex-col md:flex-row items-center justify-center space-x-10 pt-20 pb-20 max-w-screen-md">
+          <Image
+            src="../assets/working.gif"
+            alt="working"
+            height={350}
+            width={400}
+          />
 
-      <p className="text-center text-base mb:text-xl font-young">
-        Data Science Intern @{" "}
-        <a
-          href=""
-          target="_blank"
-          className="underline"
-          rel="noreffer noopener"
-        >
-          EPAM Systems
-        </a>{" "}
-        | Incoming UXR @{" "}
-        <a
-          href="https://viscoglab.psych.ubc.ca/research/correlation/k"
-          target="_blank"
-          className="underline"
-          rel="noreffer noopener"
-        >
-          Global Relay
-        </a>
-      </p>
-      <p className="pb-5 text-center font-young mb:text-xl mb-3">
-        Bachelor of Arts, Cognitive Systems 🧠 and Computer Science 🧑🏽‍💻 @ UBC
-      </p>
+          <TypedIntro />
+
+        </div>
 
         {/* Circular Scroll Button */}
         {showScrollButton && (
           <button 
             onClick={scrollToCareSection}
-            className="mx-auto w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
             aria-label="Scroll to more information"
           >
             <svg 
@@ -98,11 +68,16 @@ function Intro() {
         )}
       </div>
 
+
+      <Divider className="pt-40 max-w-screen-md" />
+
+
       {/* "I care about" Section with Scroll and Animation Ref */}
       <div 
         ref={careSectionRef}
         className="max-w-screen-md pt-40 items-center font-poppins"
       >
+        
         <Box 
           ref={careRef}
           className={`transition-all duration-700 transform ${careInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
