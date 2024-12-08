@@ -1,80 +1,129 @@
+import React, { useRef, useState, useEffect } from 'react';
 import { Divider, Box, Image } from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer";
 
 function Intro() {
-  const [ref, inView] = useInView({
-    triggerOnce: false, // Only trigger this hook once
-    threshold: 0.1, // Percentage of the item that needs to be in view
+  // Ref for the "I care about" section
+  const [careRef, careInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
-  return (
-    <div
-      ref={ref}
-      className={`flex flex-col pt-20 transition-all duration-500 transform ${inView ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}`}
-    >
-      <Box className="min-w-screen-lg" display={{ md: "flex" }}>
-        <Image
-          // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
-          src="../assets/icon.svg"
-          alt="Profile image"
-          width="200"
-          height="200"
-        />
-        <h1 className="pt-40 text-3xl md:text-7x1 mb- mb:mb-3 font-young">
-          Hey, my name is AJ
-        </h1>
-      </Box>
+  // Ref to scroll to the "I care about" section
+  const careSectionRef = useRef<HTMLDivElement>(null);
 
-      <p className="text-base mb:text-xl font-young">
-        {" "}
-        Research Assistant @{" "}
+  // State to manage visibility of the scroll button
+  const [showScrollButton, setShowScrollButton] = useState(true);
+
+  // Scroll handler function
+  const scrollToCareSection = () => {
+    careSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Update button visibility based on "I care about" section visibility
+  useEffect(() => {
+    setShowScrollButton(!careInView);
+  }, [careInView]);
+
+  return (
+    <div className="flex flex-col pt-20 transition-all duration-500 transform">
+      <div className="flex flex-col items-center relative">
+        {/* Image Section */}
+        <Image
+          src="../assets/working.gif"
+          alt="working"
+          height={550}
+          width={600}
+        />
+
+        {/* Box Section */}
+        <Box
+          className="text-3xl md:text-7x1 mb:mb-3 font-young"
+          borderRadius="lg"
+          mb={5}
+          p={2}
+          textAlign="center"
+          bg={'gray.100'}
+          css={{ backdropFilter: 'blur(10px)' }}
+        >
+          Hey, my name is AJ
+        </Box>
+
+      <p className="text-center text-base mb:text-xl font-young">
+        Data Science Intern @{" "}
         <a
           href=""
           target="_blank"
           className="underline"
           rel="noreffer noopener"
         >
-          {" "}
-          Sauder Business School
+          EPAM Systems
         </a>{" "}
-        | Data Science Specialist @{" "}
+        | Incoming UXR @{" "}
         <a
           href="https://viscoglab.psych.ubc.ca/research/correlation/k"
           target="_blank"
           className="underline"
           rel="noreffer noopener"
         >
-          {" "}
-          VCL{" "}
-        </a>{" "}
+          Global Relay
+        </a>
       </p>
-      <p className="text-left font-young mb:text-xl mb-3">
+      <p className="pb-5 text-center font-young mb:text-xl mb-3">
         Bachelor of Arts, Cognitive Systems 🧠 and Computer Science 🧑🏽‍💻 @ UBC
       </p>
 
-      <Divider className="max-w-screen-md" />
+        {/* Circular Scroll Button */}
+        {showScrollButton && (
+          <button 
+            onClick={scrollToCareSection}
+            className="mx-auto w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            aria-label="Scroll to more information"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6 text-black" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M19 9l-7 7-7-7" 
+              />
+            </svg>
+          </button>
+        )}
+      </div>
 
-      <div className="max-w-screen-md pt-5 items-center font-poppins">
-        <Box className="max-w-screen-md" display={{ md: "flex" }}>
-          <p className="text-left text-medium font-display leading-6 pb-5">
-            {" "}
-            I am a University of British Columbia undergrad studying Cognitive
-            Systems and Computer Science, with a strong foundation in software
-            development and data analysis. I am experienced in working on
-            diverse teams, including startups, NGOs, and multinational
-            corporations.{" "}
-          </p>
+      {/* "I care about" Section with Scroll and Animation Ref */}
+      <div 
+        ref={careSectionRef}
+        className="max-w-screen-md pt-40 items-center font-poppins"
+      >
+        <Box 
+          ref={careRef}
+          className={`transition-all duration-700 transform ${careInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        >
+          <Box className="max-w-screen-md" display={{ md: "flex" }}>
+            <p className="text-left text-medium font-display leading-6 pb-5">
+              I am a University of British Columbia undergrad studying Cognitive
+              Systems and Computer Science, with a strong foundation in software
+              development and data analysis. I am experienced in working on
+              diverse teams, including startups, NGOs, and multinational
+              corporations.{" "}
+            </p>
 
-          <Image
-            // src="https://plato.stanford.edu/entries/frege-logic/sec-3-1-Ga.svg"
-            src="../assets/passion.svg"
-            alt="Profile image"
-            width="300"
-            height="200"
-          />
-        </Box>
+            <Image
+              src="../assets/passion.svg"
+              alt="Profile image"
+              width="300"
+              height="200"
+            />
+          </Box>
 
-        <Box alignItems="baseline">
           <h3 className="text-3xl md:text-7x1 mb- mb:mb-3 font-young">
             I care about...
           </h3>
@@ -104,8 +153,6 @@ function Intro() {
             </a>
             {"."}
           </p>
-
-          <br />
         </Box>
       </div>
 

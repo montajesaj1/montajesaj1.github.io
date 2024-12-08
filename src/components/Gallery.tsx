@@ -15,18 +15,8 @@ interface Item {
 }
 
 function Gallery() {
-  // Special image item, note that stack is an array as per your Item interface
-  const imageItem: Item = {
-    imgUrl: "../assets/working.gif",
-    title: "",
-    desc: "",
-    stack: [],
-    link: "",
-    isImage: true,
-  };
-
   // Initialize columns with the image item in one of them
-  const columns: Item[][] = [[imageItem], [], []];
+  const columns: Item[][] = [[], [], []];
 
   // Adjust starting index for portfolio items to maintain the pattern
   portfolio.forEach((item, index) => {
@@ -35,7 +25,7 @@ function Gallery() {
   });
 
   return (
-    <div>
+    <div className="pb-20">
       <h1 className="pt-32 text-center underline justify-center text-4xl md:text-7x1 mb:mb-3 font-young">
         Gallery
       </h1>

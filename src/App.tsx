@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Intro from "./components/Intro";
-import Timeline from "./components/Timeline";
 // import Navbar from './components/Navbar';
-import Blog from "./components/Blog";
 import Gallery from "./components/Gallery";
 // import { useState, useEffect } from "react";
 
@@ -72,26 +70,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/resume"
-                className="font-young text-gray-600 hover:text-gray-900"
-              >
-                Resume
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/gallery"
                 className="font-young text-gray-600 hover:text-gray-900"
               >
                 Gallery
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/blog"
-                className="font-young text-gray-600 hover:text-gray-900"
-              >
-                Blog
               </Link>
             </li>
           </ul>
@@ -109,8 +91,6 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/resume" element={<Timeline />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
           {/*<Navbar />*/}

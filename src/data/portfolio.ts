@@ -9,39 +9,21 @@ interface Item {
 
 export default [
   {
-    title: "UBC Flow",
-    imgUrl: "../assets/flow.png",
-    desc: "UBC Flow is a generative AI advising service for students studying tech adjacent disciplines at UBC 🤗 This chatbot was made using AWS Bedrock, Anthropic Claude LLM, and data compiled from UBC Student Service Center.",
+    title: "UBC Insights WebApp",
+    imgUrl: "../assets/cpsc310.png",
+    desc: "",
     tag: "project",
     stack: ["AWS Bedrock", "LangChain", "Python", "Streamlit", "BS4 and Regex"],
     link: "https://github.com/montajesaj1/ubc-flow.git",
   },
 
   {
-    title: "Emacs dotfiles",
-    imgUrl: "../assets/emacs.png",
-    desc: "",
-    tag: "tools",
-
-    stack: ["Emacs", "Emacs Lisp", "LaTex", "Workflow"],
-    link: "../pages/emacs.jsx",
-  },
-
-  {
-    title: "Personal-Profile",
-    imgUrl: "../assets/proj1.png",
-    desc: "The portfolio you are currently viewing was built using the stack above.",
+    title: "UBC Flow",
+    imgUrl: "../assets/flow.png",
+    desc: "UBC Flow is a generative AI advising service for students studying tech adjacent disciplines at UBC 🤗 This chatbot was made using AWS Bedrock, Anthropic Claude LLM, and data compiled from UBC SSC.",
     tag: "project",
-
-    stack: [
-      "React",
-      "Vite",
-      "TypeScript",
-      "Tailwind",
-      "Node",
-      "GitHub Actions",
-    ],
-    link: "",
+    stack: ["AWS Bedrock", "LangChain", "Python", "Streamlit", "BS4 and Regex"],
+    link: "https://github.com/montajesaj1/ubc-flow.git",
   },
 
   {
@@ -53,34 +35,14 @@ export default [
     stack: ["R", "Jupyter", "TidyVerse"],
     link: "",
   },
-  {
-    title: "Neovim Config",
-    imgUrl:
-      "https://www.barbarianmeetscoding.com/static/51c339893c7c8e9191182e5596cf812f/b4972/lazyvim.png",
-    desc: "",
-    tag: "tools",
-
-    stack: ["worflow"],
-    link: "../pages/emacs.jsx",
-  },
 
   {
-    title: "Alacritty Config",
-    imgUrl: "../assets/alacritty.png",
+    title: "Cloud-based YouTube Analytics Platform",
+    imgUrl: "../assets/cpsc436.png",
     desc: "",
-    tag: "tools",
-
-    stack: ["worflow"],
-    link: "../pages/emacs.jsx",
+    tag: "project",
+    stack: ["AWS Bedrock", "LangChain", "Python", "Streamlit", "BS4 and Regex"],
+    link: "https://github.com/montajesaj1/ubc-flow.git",
   },
 
-  {
-    title: "Fish Shell Scripts",
-    imgUrl: "https://spin.atomicobject.com/wp-content/uploads/fish-logo.png",
-    desc: "",
-    tag: "tools",
-
-    stack: ["worflow"],
-    link: "../pages/emacs.jsx",
-  },
 ] as Item[];
