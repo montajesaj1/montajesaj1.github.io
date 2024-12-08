@@ -37,7 +37,7 @@ function Intro() {
           {" "}
           Sauder Business School
         </a>{" "}
-        | UX Researcher @{" "}
+        | Data Science Specialist @{" "}
         <a
           href="https://viscoglab.psych.ubc.ca/research/correlation/k"
           target="_blank"
@@ -45,7 +45,7 @@ function Intro() {
           rel="noreffer noopener"
         >
           {" "}
-          Global Relay{" "}
+          VCL{" "}
         </a>{" "}
       </p>
       <p className="text-left font-young mb:text-xl mb-3">
@@ -80,8 +80,9 @@ function Intro() {
           </h3>
           <p className="pb-2 text-medium leading-6">
             {" "}
-            Leveraging data for social advocacy, human-centered AI, behavioural economics,
-            and exploring new skills (Scala). In my spare time I enjoy Olympic lifting, listening to
+            Leveraging data for social advocacy, open source, reading philosophy
+            (modal logics, decision theory), and exploring new skills (Rust,
+            PyTorch). In my spare time I enjoy Olympic lifting, listening to
             Podcasts, and ricing Unix. If you are interested in my journey, I've
             laid it all out in my{" "}
             <a
@@ -118,7 +119,7 @@ function Intro() {
           </h3>
           <p className="pt-2 text-medium leading-6">
             {" "}
-            You can reach me at montajes@student.ubc.ca. I'm always down to chat
+            You can reach me at montajes@ubc.mail.ca. I'm always down to chat
             with new people! ☕️{" "}
           </p>
         </Box>

@@ -6,7 +6,6 @@ import Timeline from "./components/Timeline";
 import Blog from "./components/Blog";
 import Gallery from "./components/Gallery";
 // import { useState, useEffect } from "react";
-import Resume from "./components/Resume"
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { Route, Routes, Link, HashRouter } from "react-router-dom";
@@ -15,7 +14,6 @@ const Home = () => (
   <div className="flex flex-1 items-center justify-center min-w-1.5 min-h-screen p-4">
     <div className="flex flex-col items-center justify-center bg-white dark:bg-slate-900 text-stone-900 dark:text-stone-300 w-full max-w-5xl px-10 py-4">
       <Intro />
-      <iframe src="./assets/aj_resume.pdf" width="100%" height="100%" />
       <Footer />
     </div>
   </div>
@@ -37,7 +35,6 @@ const Home = () => (
 //   );
 // };
 //
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -80,7 +77,23 @@ const Navbar = () => {
               >
                 Resume
               </Link>
-              </li>
+            </li>
+            <li>
+              <Link
+                to="/gallery"
+                className="font-young text-gray-600 hover:text-gray-900"
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/blog"
+                className="font-young text-gray-600 hover:text-gray-900"
+              >
+                Blog
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
