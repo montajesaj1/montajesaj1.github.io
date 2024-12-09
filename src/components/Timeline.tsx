@@ -1,5 +1,4 @@
 import timeline from "../data/timeline";
-import education from "../data/education";
 import TimelineItem from "./TimelineItem";
 import { Image } from "@chakra-ui/react";
 
@@ -17,22 +16,6 @@ function Timeline() {
             width="200"
             height="200"
           />
-
-          {/* Education Section */}
-          <h3 className="pl-2 pt-10 justify-center text-2xl mb-3 font-young">
-            Education
-          </h3>
-          <div className="max-w-prose">
-            {education.map((item, index) => (
-              <TimelineItem
-                key={`edu-${index}`}
-                year={item.year}
-                title={item.title}
-                duration={item.duration}
-                details={item.details}
-              />
-            ))}
-          </div>
 
           {/* Experience Section */}
           <h3 className="pl-2 pt-10 justify-center text-2xl mb-3 font-young">

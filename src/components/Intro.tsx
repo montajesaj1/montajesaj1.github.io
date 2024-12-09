@@ -75,13 +75,17 @@ function Intro() {
       {/* "I care about" Section with Scroll and Animation Ref */}
       <div 
         ref={careSectionRef}
-        className="max-w-screen-md pt-40 items-center font-poppins"
+        className="max-w-screen-md pt-60 items-center font-poppins"
       >
         
         <Box 
           ref={careRef}
           className={`transition-all duration-700 transform ${careInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
+
+          <h3 className="text-3xl md:text-7x1 mb- mb:mb-3 font-young">
+            About me
+          </h3>
           <Box className="max-w-screen-md" display={{ md: "flex" }}>
             <p className="text-left text-medium font-display leading-6 pb-5">
               I am a University of British Columbia undergrad studying Cognitive
@@ -130,6 +134,7 @@ function Intro() {
           </p>
         </Box>
       </div>
+
 
       <br />
       <Divider className="max-w-screen-md" />

@@ -33,7 +33,7 @@ function TypedIntro() {
 
   useEffect(() => {
     const nameBoxTimer = setTimeout(() => setShowNameBox(true), 500);
-    const subTimer = setTimeout(() => setShowSub(true), 500);
+    const subTimer = setTimeout(() => setShowSub(true), 1500);
     const educationDetailsTimer = setTimeout(() => setShowEducationDetails(true), 2500);
 
     return () => {

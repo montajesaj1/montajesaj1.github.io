@@ -21,20 +21,6 @@ export default [
       "Coordinated a map-based exhibit for UBC's MOA. Implemented front-ends using ReactJS, NodeJS, and Chakra UI. Engaged with IT teams for future web to native app transition.",
   },
   {
-    year: "2023",
-    title: "Data Science CoPilot",
-    duration: "@ Visual Cognition Lab UBC",
-    details:
-      "Worked on the 'Correlation Project'. Built experiment conditions with JavaScript, NodeJS, and Firebase. Streamlined data analysis with Python.",
-  },
-  {
-    year: "2020",
-    title: "Production Engineering Intern ",
-    duration: "@ Marshall Wace LLP",
-    details:
-      "First application deployment on OpenShift 4. Maintained Confluence documentation and presented deployment methods. Developed a Flask and SQL based 'Ticker Search' web app.",
-  },
-  {
     year: "2017",
     title: "Data Science Intern",
     duration: "@ BlueSky Energy Technology",
